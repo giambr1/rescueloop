@@ -1,0 +1,11 @@
+- name: selrescuing
+  block:
+  - name: copy
+    ansible.builtin.copy:
+      src: ~/ansitest/ehi.txt
+      dest: ~/ansitest/ehl.txt
+  rescue:
+  - name: copy
+    ansible.builtin.include_tasks:
+      file: copy.yaml
+
