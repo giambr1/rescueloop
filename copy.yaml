@@ -2,8 +2,8 @@
   block:
   - name: copy
     ansible.builtin.copy:
-      src: ~/ansitest/ehi.txt
-      dest: ~/ansitest/ehl.txt
+      src: '{{playbook_dir}}/ehi.txt'
+      dest: '{{playbook_dir}}/ehl.txt'
   rescue:
   - name: copy
     ansible.builtin.include_tasks:
